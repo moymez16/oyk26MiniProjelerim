@@ -1,0 +1,131 @@
+:root {
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    font-size: 18px;
+    background-color: #121413;
+    /* Koyu, hafif yosunlu/küflü gri tonu */
+    color: #e0ded8;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+.tlou-title {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.header-content {
+    position: relative;
+    /* İçindeki mutlak konumlu elemanları sınırlandırmak için */
+    width: 100%;
+    height: 150px;
+    /* Header yüksekliği */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.menu-bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-image: url(header-tlou.png);
+    opacity: 0.35;
+}
+
+.header-nav {
+    display: flex;
+    position: sticky;
+    z-index: 1;
+    /* Menünün resmin üzerinde kalmasını sağlar */
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #e0ded8;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-nav a:hover {
+    color: #4ade80;
+    transform: translateY(-2px);
+}
+
+.header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    font-size: 24px;
+}
+
+.header-nav ul :hover {
+    text-decoration: underline;
+    font-weight: bolder;
+    transition: 2ms;
+
+}
+
+.header-nav ul a {
+    text-decoration: none;
+    color: white;
+    list-style: none;
+
+}
+
+.header-content:hover .menu-bg-img {
+    opacity: 0.85;
+    transform: scale(1.02);
+}
+
+.content-wrapper {
+    display: flex;
+    /* Elemanları yan yana dizer */
+    gap: 32px;
+    /* Main ve Side arasındaki boşluk */
+    max-width: 95%;
+    /* Sayfa genişlik sınırı */
+    margin: 30px auto;
+    /* Sayfada ortalar */
+    padding: 0 10px;
+}
+
+.main-content {
+    flex: 3;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    /* BU SATIRI EKLE (Taşmayı önler) */
+    overflow: hidden;
+    /* Genişliğin büyük kısmını (yaklaşık %75) kaplar */
+}
+
+.side-content {
+    flex: 1;
+    /* Kalan alanı (yaklaşık %25) kaplar */
+    height: fit-content;
+    /* İçeriği kadar uzar, sayfa sonuna kadar boş uzamaz */
+}
