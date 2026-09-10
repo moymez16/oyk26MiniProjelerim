@@ -1,0 +1,89 @@
+:root {
+  --bg: #fff6e8;
+  --bg-panel: #fffdf8;
+  --bg-raised: #ffffff;
+  --text: #43382c;
+  --text-h: #1d160f;
+  --text-muted: #7a6c5a;
+  --border: #ead9c0;
+  --accent: #e3350d;
+  --accent-soft: color-mix(in srgb, var(--accent) 16%, white);
+  --theme: var(--accent);
+  --theme-2: #3b82c4;
+  --shadow: color-mix(in srgb, var(--theme) 22%, transparent) 0 14px 28px -14px;
+
+  --color-normal: #a8a77a;
+  --color-fire: #ee8130;
+  --color-water: #6390f0;
+  --color-electric: #f7d02c;
+  --color-grass: #7ac74c;
+  --color-ice: #96d9d6;
+  --color-fighting: #c22e28;
+  --color-poison: #a33ea1;
+  --color-ground: #e2bf65;
+  --color-flying: #a98ff3;
+  --color-psychic: #f95587;
+  --color-bug: #a6b91a;
+  --color-rock: #b6a136;
+  --color-ghost: #735797;
+  --color-dragon: #6f35fc;
+  --color-dark: #705746;
+  --color-steel: #b7b7ce;
+  --color-fairy: #d685ad;
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+
+  font: 16px/1.45 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100svh;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+ul,
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
